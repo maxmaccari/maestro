@@ -1,21 +1,11 @@
 # Maestro
 
-**TODO: Add description**
+CLI app to help manage development workspaces easily
 
-## Installation
+## Usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `maestro` to your list of dependencies in `mix.exs`:
+Setup your workspace
 
-```elixir
-def deps do
-  [
-    {:maestro, "~> 0.1.0"}
-  ]
-end
+```sh
+> maestro setup
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/maestro>.
-
