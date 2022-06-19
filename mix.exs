@@ -8,7 +8,8 @@ defmodule Maestro.MixProject do
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      releases: releases()
+      releases: releases(),
+      aliases: aliases()
     ]
   end
 
@@ -41,6 +42,12 @@ defmodule Maestro.MixProject do
           ]
         ]
       ]
+    ]
+  end
+
+  defp aliases do
+    [
+      check: ["format --check-formatted", "credo --strict", "dialyzer"]
     ]
   end
 end
