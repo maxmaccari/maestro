@@ -8,7 +8,8 @@ defmodule Maestro.MixProject do
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      releases: releases()
+      releases: releases(),
+      aliases: aliases()
     ]
   end
 
@@ -23,7 +24,9 @@ defmodule Maestro.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:burrito, github: "burrito-elixir/burrito"}
+      {:burrito, github: "burrito-elixir/burrito"},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.0", only: [:dev], runtime: false}
     ]
   end
 
@@ -39,6 +42,12 @@ defmodule Maestro.MixProject do
           ]
         ]
       ]
+    ]
+  end
+
+  defp aliases do
+    [
+      check: ["format --check-formatted", "credo --strict", "dialyzer"]
     ]
   end
 end
